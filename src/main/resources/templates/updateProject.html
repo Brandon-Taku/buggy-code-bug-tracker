@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Arclabs Architecture</title>
+	
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+      />
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<div class="m-4">
+			<h2>Update Project</h2>
+		</div>
+		
+		<form th:action="@{/saveProject}" method="post" th:object="${project}"
+			style="max-width: 600px; margin: 0 auto;"
+		>
+		
+			<div class="m-5">
+			
+				<div class="form-group row">
+					<label class="col-form-label col-4">Project ID</label>
+					<div class="col-8">
+						<input type="text" name="id" class="form-control" th:value="${project.id}"  readonly />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Project Name</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{project_name}"  required />
+					</div>
+				</div>
+				
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Project Description</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{description}" required />
+					</div>	
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Submission Date</label>
+					<div class="col-8">
+						<input type="date" class="form-control" th:field="*{submission_date}" required />
+					</div> 
+				</div>
+				
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Duration</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{duration}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Client Name</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{client_name}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Client Address</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{client_address}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Phone No: </label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{phone_no}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Email</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{emailId}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Department Name</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{department_name}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Project Lead</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{project_lead}" required />
+					</div>
+				</div>
+				
+				
+			</div>
+			
+			<div>
+				<button type="submit" class="btn btn-primary">Update Project</button>
+			</div>
+			
+		</form>
+		
+		<br>
+		<br>
+	</div>
+
+	
+</body>
+
+</html>

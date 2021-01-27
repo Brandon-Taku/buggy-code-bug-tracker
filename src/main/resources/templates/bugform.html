@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="ISO-8859-1">
+     <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+      />
+      
+    <link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+     <title>Sign-Up</title>
+</head>
+<body>
+
+	<div class="container text-center">
+		<div>
+			<h2>Assign Bug</h2>
+		</div>
+		
+		<form th:action="@{/assign_bug}" method="post" th:object="${bug}"
+			style="max-width: 600px; margin: 0 auto;"
+		>
+		
+			<div class="m-5">
+				<div class="form-group row">
+					<label class="col-form-label col-4">Assign Bug</label>
+					<div class="col-8">
+						<input type="email" class="form-control" required />
+					</div>
+				</div>
+				
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Bug Type</label>
+					<div class="col-8">
+						<input type="password" class="form-control"  required minlength="6" maxlength="20" />
+					</div>	
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Bug Level</label>
+					<div class="col-8">
+						<input type="text" class="form-control"  required />
+					</div> 
+				</div>
+				
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Project Name</label>
+					<div class="col-8">
+						<input type="text" class="form-control" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Tester Code</label>
+					<div class="col-8">
+						<input type="text" class="form-control" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Bug Date</label>
+					<div class="col-8">
+						<input type="date" class="form-control" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Employee Code</label>
+					<div class="col-8">
+						<input type="text" class="form-control" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Status</label>
+					<div class="col-8">
+						<input type="text" class="form-control" required />
+					</div>
+				</div>
+				
+				
+			</div>
+			
+			<div>
+				<button type="submit" class="btn btn-primary">Sign Up</button>
+			</div>
+			
+		</form>
+	</div>
+
+</body>
+</html>

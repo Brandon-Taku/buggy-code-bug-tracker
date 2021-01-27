@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Buggy | Code</title>
+	
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<div class="m-4">
+			<h2>Assign Bug</h2>
+		</div>
+		
+		<form th:action="@{/assign_bug}" method="post" th:object="${bug}"
+			style="max-width: 600px; margin: 0 auto;"
+		>
+		
+			<div class="m-5">
+				<div class="form-group row">
+					<label class="col-form-label col-4">Bug Name</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{bugName}"  required />
+					</div>
+				</div>
+				
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Bug Type</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{bugType}" required minlength="6" maxlength="20" />
+					</div>	
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Bug Level</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{bugLevel}" required />
+					</div> 
+				</div>
+				
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Project Name</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{projectName}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Tester Code</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{testerCode}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Bug Date</label>
+					<div class="col-8">
+						<input type="date" class="form-control" th:field="*{bugDate}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Employee Code</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{employeeCode}" required />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4">Status</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{status}" required />
+					</div>
+				</div>
+				
+				
+			</div>
+			
+			<div>
+				<button type="submit" class="btn btn-primary">Submit Bug</button>
+			</div>
+			
+			<br>
+			<br>
+		</form>
+		
+		
+	</div>
+	
+	<footer class="footer-area p-5">
+		<div class="container">
+		
+				<p class="col-lg-8 col-sm-9 footer-text m-0 text-white text-right">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Brandon-Taku</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+
+	
+		</div>
+	</footer>
+
+	
+</body>
+
+</html>

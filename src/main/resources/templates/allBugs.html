@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+     <meta charset="ISO-8859-1">
+     <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+      />
+    
+     <title>All Bugs</title>
+</head>
+<body>
+	<div class="container text-center">
+	
+	    <div>
+	    	<h1>List of All Bugs</h1>
+	    </div>
+		<div>
+			<table class="table table-striped table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th>Bug ID</th>
+						<th>Bug Name</th>
+						<th>Bug Type</th>
+						<th>Bug Level</th>
+						<th>Project Name</th>
+						<th>Tester Code</th>
+						<th>Bug Date</th>
+						<th>Employee Code</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="bug: ${listBugs}">
+						<td th:text="${bug.id}">Bug ID</td>
+						<td th:text="${bug.bugName}">Bug Name</td>
+						<td th:text="${bug.bugType}">Bug Type</td>
+						<td th:text="${bug.bugLevel}">Bug Level</td>
+						<td th:text="${bug.projectName}">Project Name</td>
+						<td th:text="${bug.testerCode}">Tester Code</td>
+						<td th:text="${bug.bugDate}">Bug Date</td>
+						<td th:text="${bug.employeeCode}">Employee Code</td>
+						<td th:text="${bug.status}">Status</td>
+					</tr>
+				</tbody>
+			</table>
+	   </div>
+	   
+	   
+	   <footer class="footer-area p-5">
+		<div class="container">
+		
+				<p class="col-lg-8 col-sm-9 footer-text m-0 text-white text-right">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Brandon-Taku</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+
+	
+		</div>
+	</footer>
+	</div>
+	
+	
+	
+
+</body>
+</html>
